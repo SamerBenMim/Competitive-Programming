@@ -38,5 +38,4 @@ return ans;
 
 let t =process.argv[2].split(',').map(Number=> Number*=1 );
 console.log(t)
-let n = t.length;
 console.log(solve(t))  
