@@ -6,7 +6,6 @@ long mod = 998244353 ;
 using namespace std;
 long long loose(int n);
 #define fastInp cin.tie(0); cout.tie(0); ios_base::sync_with_stdio(0);
-long long fact(int n);
  long long nChoosek(long long n, long long k)
 {
     long long C[n + 1][k + 1];
@@ -35,15 +34,6 @@ long long fact(int n);
 //}
  
 // Returns factorial of n
-long long fact(int n)
-{
-      if(n==0)
-      return 1;
-    int res = 1;
-    for (int i = 2; i <= n; i++)
-        res = res * i;
-    return res;
-}
 //long long nChoosek( long n, long k )
 //{
 //    if (k > n) return 0;
@@ -76,6 +66,7 @@ cin>>n;
 //for(int i=2;i<=n;i+=2)
 // cout<<i <<" : "<<win(i)<<" "<<loose(i)<<" "<<1 <<endl; 
  
+cout<<win(n)<<" "<<loose(n)<<" "<<1 <<endl; 
 cout<<win(n)<<" "<<loose(n)<<" "<<1 <<endl; 
 
 }
