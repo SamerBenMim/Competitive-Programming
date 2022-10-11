@@ -53,13 +53,14 @@ else{
 
 }
 int main() {
-    fastInp
-    int t;
-    cin>>t;
-
-    while(t--){
-        solve();
-    }
+	cout<<gcd(5,15);
+//    fastInp
+//    int t;
+//    cin>>t;
+//
+//    while(t--){
+//        solve();
+//    }
 
     return 0;
 }
