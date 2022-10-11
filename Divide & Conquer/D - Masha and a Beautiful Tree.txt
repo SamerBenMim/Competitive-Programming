@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fastInp cin.tie(0); cout.tie(0); ios_base::sync_with_stdio(0);
+ 
+bool check(int* t, int n,int &ans){
+	if(n==1) return true ;
+	if(n==2){
+		if(t[0]-t[1]==1)ans++;
+		if(abs(t[0]-t[1])==1) return true;
+		
+		return false;
+	}
+	int mi = INT_MAX;
+	int ma = 0;
+	for(int i=0;i<n;++i){
+		mi = min(mi,t[i]);
+		ma =  max(ma,t[i]);
+	}
+	if( t[0]> t[n-1])ans++;
+	if(ma-mi>=n){
+	return false;}
+	return check(t,n/2,ans)&& check(t+n/2,n/2,ans);
+ 
+}
+void solve(){
+int m;
+cin>>m;
+int t[m];
+int ans = 0 ;
+for(int i =0;i<m ;++i)cin>>t[i];
+if(check(t,m,ans))cout<<ans<<endl;
+else cout<<-1<<endl;
+}
+ 
+ 
+ 
+int main() {
+    fastInp
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+ 
+ 
+    return 0;
+ 
+}
